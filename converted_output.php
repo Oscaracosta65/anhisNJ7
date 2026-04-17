@@ -1,7 +1,7 @@
 <?php
 /**
  * LottoExpert.net — SKAI Results Intelligence
- * Pick 6 — NJ6 / IN1 / NJ7
+ * Pick 6 — NJ6 / IN1 / INZ / NJ7
  * Joomla 5.x + PHP 8.1+
  *
  * ASSUMES UPSTREAM VARIABLES:
@@ -9,7 +9,7 @@
  * - $stateAbrev
  * - $gName
  * - $dbCol
- * - $gId  (NJ6 | IN1 | NJ7)
+ * - $gId  (NJ6 | IN1 | INZ | NJ7)
  *
  * GAME CONFIG:
  * - Pick 6 format — 6 main balls, no bonus pool
@@ -491,7 +491,7 @@ $lowestUrl = '/lowest-drawn-number-analysis?' . http_build_query([
 
 if ($gId === 'NJ6') {
     $heatmapUrl = '/picking-winning-numbers/artificial-intelligence/new-jersey-pick-6-lotto-heatmap-analysis';
-} elseif ($gId === 'IN1') {
+} elseif ($gId === 'IN1' || $gId === 'INZ') {
     $heatmapUrl = '/picking-winning-numbers/artificial-intelligence/indiana-hoosier-lotto-heatmap-analysis';
 } else {
     $heatmapUrl = '/all-lottery-heatmaps?' . http_build_query([
